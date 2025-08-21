@@ -1,0 +1,13 @@
+name: Issues
+on:
+  issues:
+    types:
+      - opened
+jobs:
+  print_pr_title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Issue Title
+      - run: echo " ${{github.event.issues.title}}
+
+      
