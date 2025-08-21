@@ -26,8 +26,9 @@ jobs:
       - name: Try to fetch with no credentials
         run: |
           set -x
-          git fetch || echo "Fetch failed as expected (no persisted credentials)"
-      
+          echo "---- secure checkout ----"
+          git config --get credential.helper || echo "none"
+          cat .git/config
       - name: Setup Go
         uses: actions/setup-go@d35c59abb061a4a6fb18e82ac0862c26744d6ab5 # v5.5.0
         with:
