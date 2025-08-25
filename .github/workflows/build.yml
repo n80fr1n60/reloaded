@@ -19,7 +19,7 @@ jobs:
         with:
           egress-policy: audit # TODO: change to 'egress-policy: block' after couple of runs
 
-      - uses: n80fr1n60/secure-checkout@c64cb640a80cda75c4172528782e3c79e05a58fd # v1.0.0      
+      - uses: n80fr1n60/secure-checkout@6a2a82c65590515225431bc4a63f10f37291251f # v1.0.1
       - name: Run a one-line script
         run: echo Hello, world!
 
