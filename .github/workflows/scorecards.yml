@@ -4,7 +4,9 @@
 
 name: OSSF SCore Local
 on:
-  workflow_dispatch:
+  pull_request:
+    types: [opened, reopened, edited]
+
 
 # Declare default permissions as read only.
 permissions: read-all
